@@ -4,11 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Website bán bếp gas JGas">
-    <title>JGas - Trang chủ</title>
+    <meta name="description"
+        content="Website bán bếp gas JGas - Chuyên cung cấp các sản phẩm bếp gas an toàn và chất lượng cao.">
+    <meta name="keywords" content="bếp gas, JGas, bếp gas chất lượng, mua bếp gas online">
+    <title>JGas</title>
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -22,108 +26,72 @@
         <div class="container header-container">
             <div class="logo">JGas</div>
             <nav class="menu">
-                <a href="#" class="menu-item">Trang chủ</a>
-                <a href="#" class="menu-item">Giới thiệu</a>
-                <a href="#" class="menu-item">Bài viết</a>
-                <a href="#" class="menu-item">Liên hệ</a>
+                <a href="#home" class="menu-item" data-link data-lang="home">Trang chủ</a>
+                <a href="#about" class="menu-item" data-link data-lang="about">Giới thiệu</a>
+                <a href="#" class="menu-item" data-lang="posts">Bài viết</a>
+                <a href="#" class="menu-item" data-lang="contact">Liên hệ</a>
             </nav>
             <div class="right-section">
-                <input type="text" class="search-input" placeholder="Tìm kiếm...">
-                <button class="lang-switch-btn">VN/EN</button>
+                <input type="text" class="search-input" placeholder="Tìm kiếm..."
+                    data-lang-placeholder="search-placeholder">
+                <button class="lang-switch-btn" onclick="switchLanguage()">VN/EN</button>
             </div>
         </div>
     </header>
-    <section class="hero-section">
-        <div class="hero-content">
-            <h1 class="hero-title">Khám phá các sản phẩm bếp gas an toàn</h1>
-            <p class="hero-description">JGas - Đồng hành cùng mọi bữa ăn của bạn</p>
-            <a href="#" class="hero-btn">Xem sản phẩm</a>
-        </div>
-    </section>
-    <section class="content-section">
-        <div class="container">
-            <h2 class="section-title">Bài viết gần đây</h2>
-            <div class="row">
-                <!-- Card 1 -->
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://source.unsplash.com/400x300/?gas,stove" class="card-img-top" alt="Bếp gas">
-                        <div class="card-body">
-                            <h5 class="card-title">Bếp gas an toàn</h5>
-                            <p class="card-text">Tìm hiểu các loại bếp gas an toàn cho gia đình bạn.</p>
-                            <a href="#" class="btn btn-primary">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://source.unsplash.com/400x300/?kitchen,cooking" class="card-img-top"
-                            alt="Nấu ăn">
-                        <div class="card-body">
-                            <h5 class="card-title">Mẹo nấu ăn nhanh</h5>
-                            <p class="card-text">Những mẹo nhỏ giúp bạn nấu ăn nhanh chóng và hiệu quả.</p>
-                            <a href="#" class="btn btn-primary">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://source.unsplash.com/400x300/?food,meal" class="card-img-top" alt="Món ăn">
-                        <div class="card-body">
-                            <h5 class="card-title">Món ăn gia đình</h5>
-                            <p class="card-text">Khám phá các món ăn truyền thống cho bữa cơm gia đình.</p>
-                            <a href="#" class="btn btn-primary">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Form liên hệ -->
-            <h2 class="section-title">Liên hệ với chúng tôi</h2>
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="name">Họ và tên</label>
-                    <input type="text" class="form-control" id="name" placeholder="Nhập họ và tên">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Nhập email">
-                </div>
-                <div class="form-group">
-                    <label for="message">Nội dung</label>
-                    <textarea class="form-control" id="message" rows="5" placeholder="Nhập nội dung"></textarea>
-                </div>
-                <button type="submit" class="btn btn-success">Gửi</button>
-            </form>
-        </div>
-    </section>
+
+
+
+
+    <div id="content">
+
+    </div>
 
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <!-- Thông tin liên hệ -->
                 <div class="footer-contact">
-                    <h5>Liên hệ</h5>
-                    <p>Địa chỉ: 123 Đường ABC, Thành phố XYZ</p>
-                    <p>Email: support@jgas.com</p>
-                    <p>Số điện thoại: (+84) 123 456 789</p>
+                    <h5 data-lang="contact">Liên hệ</h5>
+                    <p data-lang="address">Địa chỉ: 123 Đường ABC, Thành phố XYZ</p>
+                    <p data-lang="email">Email: support@jgas.com</p>
+                    <p data-lang="phone">Số điện thoại: (+84) 123 456 789</p>
                 </div>
 
                 <!-- Biểu tượng mạng xã hội -->
                 <div class="footer-social">
-                    <h5>Kết nối với chúng tôi</h5>
-                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <h5 data-lang="connect">Kết nối với chúng tôi</h5>
+                    <div class="d-flex-icon d-flex justify-content-center">
+                        <a href="https://www.facebook.com/nt.tinhng" class="social-icon fs-4 mx-3" target="_blank"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon fs-4 mx-3" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="social-icon fs-4 mx-3" target="_blank"><i class="bi bi-instagram"></i></a>
+                    </div>
                 </div>
 
                 <!-- Liên kết chính sách -->
                 <div class="footer-links">
-                    <h5>Thông tin</h5>
-                    <a href="#">Chính sách bảo mật</a>
-                    <a href="#">Điều khoản sử dụng</a>
+                    <h5 data-lang="info">Thông tin</h5>
+                    <a href="#" data-lang="warranty-policy">Chính sách bảo hành</a>
+                    <a href="#" data-lang="terms-of-use">Điều khoản sử dụng</a>
+                </div>
+
+                <!-- Form liên hệ -->
+                <div class="footer-links">
+                    <h5 data-lang="contact-us">Liên hệ với chúng tôi</h5>
+                    <div class="form-email d-flex justify-content-center">
+                        <!-- From Uiverse.io by satyamchaudharydev -->
+                        <div class="email-card">
+                            <span class="email-card__title" data-lang="subscribe">Đăng ký</span>
+                            <p class="email-card__content text-black" data-lang="subscribe-description">Bạn sẽ nhận được
+                            <div class="email-card__form">
+                                <input id="user_email" placeholder="Email của bạn" type="text"
+                                    data-lang-placeholder="email-placeholder">
+                                <button class="email-sign-up" data-lang="subscribe-btn" onclick="sendEmail()">Đăng
+                                    ký</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <p class="footer-copyright">© 2025 JGas. All rights reserved.</p>
@@ -133,7 +101,20 @@
 
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="./js/language.js"></script>
+    <script src="./js/email.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "ByO6sRYRZGs8DTR84",
+            });
+        })();
+    </script>
+    <script src="./js/app.js"></script>
 </body>
 
 </html>
